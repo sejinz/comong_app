@@ -1,0 +1,148 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+
+*{-webkit-text-size-adjust: none;}
+/* ⬆️ 모바일 웹킷 브라우저는 뷰포트가 변할때 텍스트 크기를 자동으로 조절한다. 
+텍스트 크기 조절 금지할때 사용  */
+body{
+    color: #333;
+    font-size: 14px;
+    font-family: "Rubik", sans-serif;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+#wrap{
+    overflow: hidden;
+    position: relative;
+    width: 375px;
+    height: 812px;
+    margin: 0 auto;  
+}
+/* 배경 동그라미  */
+.top_circle{
+    position: absolute;
+    top: -80px;
+    right: -30px;
+    background-image: url(../images/splash_circle_top.png);
+   width: 150px;
+   height: 198px;
+   opacity: 0.9;
+   position: absolute;
+   animation:scale 8s infinite alternate 2s;  
+}
+@keyframes scale{
+    0%{transform: scale(1);}
+    100%{transform: scale(1.2);}
+ }  
+.bottom_circle{
+    position: absolute;
+    bottom: -100px;
+    left: -200px;
+   background-image: url(../images/splash_circle_bottom.png);
+   width: 393px;
+   height: 300px;
+   opacity: 0.9;
+   position: absolute;
+   animation:scale 8s infinite alternate 1s;  
+}
+
+.yellow{
+    position: absolute;
+    top: 180px;
+    left: 120px;
+    animation: ani2 2s linear 0s;
+}
+.blue{
+    position: absolute;
+    top: 280px;
+    left: 60px;
+    animation: ani3 2s linear 0s;
+}
+.red{
+    position: absolute;
+    top: 280px;
+    right: 60px;
+    animation: ani4 2s linear 0s;
+}
+@keyframes ani2{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+ }  
+ @keyframes ani3{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+ }
+ @keyframes ani4{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+ }
+.content{
+    animation:ani 1s infinite alternate 4s;  
+}
+@keyframes ani{
+   0%{transform:translate(0,0);}
+   100%{transform:translate(0,15px);}
+}  
+/* .txt{
+    margin-top: 520px;
+    text-align: center;
+}
+.txt h2{
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 20px;
+    padding-bottom: 10px;
+}
+.txt p span{
+    color: #FFBA00;
+}
+.txt p{
+    color: rgb(92, 92, 92);
+    font-family: "Noto Sans KR";
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    animation-delay: 10s;
+    animation: txt 1s linear 4s; 
+}*/
+@keyframes txt {
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 1;}
+}
+/* //svg  */
+.text-wrap{
+    position: absolute;
+    top: 415px;
+}
+    svg text {
+         font-family: 'Rubik'; 
+        font-size: 4em;
+         fill:transparent; 
+        stroke-dasharray: 326px; 
+        animation: stroke 1s linear; 
+        animation-fill-mode: forwards; 
+    }
+     
+    svg text:nth-child(1) { animation-delay: 0s; } 
+    svg text:nth-child(2) { animation-delay: 0.5s; } 
+    svg text:nth-child(3) { animation-delay: 1s; } 
+    svg text:nth-child(4) { animation-delay: 1.5s; } 
+    svg text:nth-child(5) { animation-delay: 2s; } 
+    svg text:nth-child(6) { animation-delay: 2.5s; }
+     
+     @keyframes stroke { 
+         0% { stroke:#ff9170; stroke-width: 3px; stroke-dashoffset: 326px; } 
+         70% { fill: transparent; }
+          98% { stroke:#FFBA00; stroke-width: 3px; } 
+          100% { fill: #FFBA00; stroke-dashoffset: 0px; } 
+          }

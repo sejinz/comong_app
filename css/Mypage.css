@@ -1,0 +1,221 @@
+@import url(reset.css);
+*{-webkit-text-size-adjust: none;}
+/* ⬆️ 모바일 웹킷 브라우저는 뷰포트가 변할때 텍스트 크기를 자동으로 조절한다. 
+텍스트 크기 조절 금지할때 사용  */
+body{
+    color: #333;
+    font-size: 14px;
+    font-family: "Noto Sans KR";
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+.clearfix::after, .clearfix::before{content: ""; display: block; clear: both;}
+
+#wrap{
+
+    width: 375px;
+    height: 812px;
+    margin: 0 auto;  
+}
+#header{
+    position: relative;
+    padding: 50px 0 0 20px;
+}
+#header img:first-of-type{
+    float: left;
+    padding-right: 10px;
+}
+#header img:last-of-type{
+    z-index: -1;
+    position: absolute;
+    top: 75px;
+    left: 190px;
+    animation: ani 2.5s infinite 0s;
+}
+@keyframes ani {
+    0% {opacity: 1;}
+      50% {opacity: 0.2;}
+      100% {opacity: 1;}
+    }
+#header p{
+    font-weight: 500;
+    padding: 35px;
+    font-size: 25px;
+}
+.content1 ul{
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+}
+.content1 ul li{
+    flex: 1;
+}
+.content1 ul li img{
+    display: block;
+}
+.content1 ul li a{
+    display: inline-block;
+}
+
+/* 달력 */
+.content2 {
+    position: relative;
+    margin: 20px;
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: #ffc629a2 1px solid;
+}
+.content2 h2{
+    font-size: 20px;
+    color: #ffc629;
+    font-weight: bold;
+}
+.content2> a img{
+    width: 13px;
+}
+.content2> a{
+    position: absolute;
+    top: 5px;
+    right: 35px;
+    display: inline-block;
+    animation: click 1.0s linear infinite;
+    }
+@keyframes click {
+    0% {transform: scale(1);
+        background-color: #ffc629;
+        padding: 1px 10px;
+        border-radius: 15px;
+    }
+    30% {transform: scale(1.1);
+        background-color: #ffc629;
+        padding: 1px 10px;
+        border-radius: 15px;
+    }
+    50% {transform: scale(1.2);
+        background-color: #ffc629;
+        padding: 1px 10px;
+        border-radius: 15px;
+    }
+    100% {transform: scale(1);
+        background-color: #ffc629;
+        padding: 1px 10px;
+        border-radius: 15px;
+    }
+}
+.content2 ul  li span{
+    color: red;
+}
+.content2 > ul:first-of-type> li{
+    display: inline-block;
+    padding: 14.5px;
+} 
+.content2 > ul:last-of-type> li{
+    display: inline-block;
+    padding: 10px;
+}
+.content2 > ul:last-of-type> li >a{
+    color: #fff;
+    background-color: #ffc629;
+    padding: 3px 5px;
+    border-radius: 8px;
+}
+.content2 p{
+    color: #ffc629;
+    font-size: 12px;
+    letter-spacing: 0.7px;
+    display: inline-block;
+}
+.content2 p:first-of-type{
+    padding-right: 65px;
+}
+/* 하단 카테고리  */
+.content3{
+    padding: 20px;
+}
+.content3 ul{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 35px;
+    text-align: center;
+}
+.content3 ul:last-of-type{
+    padding-bottom: 84px;
+}
+.content3 ul:first-of-type li:first-of-type img{
+    padding: 7px;
+}
+.content3 ul:first-of-type li:nth-of-type(3) img{
+    padding: 3px;
+}
+.content3 ul:first-of-type li:nth-of-type(4) img{
+    padding: 3px;
+}
+.content3 ul:last-of-type li:first-of-type img{
+    padding:0 0 8px 7px ;
+}
+.content3 ul:last-of-type li:nth-of-type(2) img{
+    padding:0 0 1px 7px ;
+}
+
+.content3 ul li img{
+    display: block;
+}
+.content3> ul >li >a{
+    text-align: center;
+    display: inline;
+}
+
+/* footer  */
+#footer{
+    background: #F9F9F9;
+    box-sizing: border-box;
+    padding: 12px 0px;
+}
+#footer ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer ul li{
+    float: left;
+}
+
+/* popup  */
+.popup{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    left: 35px;
+    top: 300px;
+    height: 130px;
+    width: 300px;
+    background: #fff;
+    border: 3px solid #ffc629;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.popup h2{
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.popup .close{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+.popup .close img{
+    width: 13px;
+}
+.bg{
+    display: none;
+    background-color: #ffc6298a;
+    position: fixed;
+    top: 0;
+    width: 375px;
+    height: 812px;
+}

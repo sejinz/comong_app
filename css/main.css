@@ -1,0 +1,222 @@
+@import url(reset.css);
+*{-webkit-text-size-adjust: none;}
+/* ⬆️ 모바일 웹킷 브라우저는 뷰포트가 변할때 텍스트 크기를 자동으로 조절한다. 
+텍스트 크기 조절 금지할때 사용  */
+body{
+    color: #333;
+    font-size: 14px;
+    font-family: "Noto Sans KR";
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+.clearfix::after, .clearfix::before{content: ""; display: block; clear: both;}
+
+#wrap{
+    width: 375px;
+    height: 812px;
+    margin: 0 auto;
+}
+select{
+    font-family: "Noto Sans KR";
+    margin: 40px 0 20px 30px;
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    box-shadow: 1px 2px 5px rgb(204, 204, 204);
+    border-radius: 10px;
+}
+#container{
+    padding: 0 20px;
+}
+/* 호랑이 베너  */
+.bannerbox{
+    width: 260px;
+    height: 90px;
+    border-radius: 18px;
+    border: 3px solid #eee;
+}
+.bannerbox h2{
+    font-size: 20px;
+    float: left;
+    font-weight: bold;
+    padding: 17px 0 17px 15px;
+}
+.bannerbox img{
+    padding: 13px 25px 20px 35px;
+    animation: lion 2s linear 0s;
+}
+@keyframes lion {
+     0% {
+    -webkit-transform: translateX(-800px) rotate(-540deg);
+            transform: translateX(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(100deg);
+            transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes roll-in-left {
+  0% {
+    -webkit-transform: translateX(-800px) rotate(-540deg);
+            transform: translateX(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.comong{
+    font-size: 23px;
+    color: #ffbb00;
+    font-weight: bold;
+}
+/* 검색 박스  */
+.srch{
+    position: relative;
+    width: 100%;
+    padding:20px 0 30px 0;
+}
+.srch form input[type=text]{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border: none;
+    border: 3px solid #eee;
+}
+.srch form img{
+    width: 25px;
+    position: absolute;
+    right: 50px;
+    top: 28px;
+}
+input::placeholder{
+    padding-left: 10px;
+    font-size: 13px;
+    color: #ccc;
+    letter-spacing: 1.4px;
+  }
+
+/* content  */
+.content{
+    position: relative;
+}
+.content h2{
+    font-size: 16px;
+    font-weight: 500;
+}
+.cont_menu{
+    padding: 20px 0;
+}
+.cont_menu a img{
+    animation: circle 1.5s infinite 0s;
+}
+
+@keyframes circle {
+    0% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+      }
+      50% {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+      }
+      100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+      }
+    }
+    .cont_menu> a{
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+}
+.content > a{
+    position: absolute;
+    font-size: 12px;
+    right: 10px; 
+    top: 0;
+    box-shadow: 1px 2px 2px #eee;
+    border-radius:15px;
+    padding: 3px 8px;
+    transition: all 0.2s linear 0s;
+}
+/* 코모임 배너  */
+#wrap h2{
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+.cont_banner{
+    margin: 0 auto;
+    width: 307.7px;
+    overflow: hidden;
+}
+.all_bestbox{
+    position: relative;
+    width: 200%;
+
+}
+/* 내용물 박스  */
+.banerbox {    
+    float: left;
+    background-color: #ffebbf;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 19px;
+    margin-right: 10.5px;
+}
+.left{
+    float: left;
+}
+.left p{
+    font-size: 12px;
+}
+.left h2{
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+.left h2 span{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffc629;
+}
+.left > a{
+    background-color: #ffc629;
+    color: #FFF3E6;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.right{
+    float: right;
+}
+.banerbox img{
+    padding-top: 27px;
+    width: 100px;
+}
+/* footer  */
+#footer{
+    background: #F9F9F9;
+    box-sizing: border-box;
+    padding: 12px 0px;
+}
+#footer ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer ul li{
+    float: left;
+}
+#footer ul li a img:hover{
+    transform: scale(1.1);
+}

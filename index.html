@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var pathes = $("#Layer_1").find('path');
+            pathes.each(function(i,path){
+
+                //각 path의 길이를 구한다
+                var total_length = path.getTotalLegth();
+                console.log(total_length);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="top_circle"></div>
+        <div class="bottom_circle"></div>
+        <div class="content">
+            <h1 class="yellow"><a href="login.html"><img src="images/yellow.png" alt="로고 이미지"></a></h1>
+            <h1 class="blue"><a href="login.html"><img src="images/blue.png" alt="로고 이미지"></a></h1>
+            <h1 class="red"><a href="login.html"><img src="images/red.png" alt="로고 이미지"></a></h1>
+        </div>
+        <!-- content  -->
+            <!-- <div class="txt">
+            <p><span>CO</span>-WORKER 들의<br>
+                <span>MO</span>임 진행 중</p>
+            </div> -->
+            <!-- txt  -->
+            <div class="text-box"> 
+                <div class="text-wrap">
+                     <svg width=525 height=160 viewBox="0 0 440 160">
+                          <text x="0" y="50%">C</text> 
+                          <text x="45" y="50%">O</text> 
+                          <text x="95" y="50%">M</text> 
+                          <text x="150" y="50%">O</text> 
+                          <text x="200" y="50%">N</text>
+                           <text x="250" y="50%">G</text> 
+
+                       </svg> 
+                      </div>
+                       </div>
+
+        </div>
+    <!-- wrap  -->
+</body>
+</html>

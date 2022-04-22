@@ -1,0 +1,146 @@
+@import url(reset.css);
+*{-webkit-text-size-adjust: none;}
+/* ⬆️ 모바일 웹킷 브라우저는 뷰포트가 변할때 텍스트 크기를 자동으로 조절한다. 
+텍스트 크기 조절 금지할때 사용  */
+body{
+    color: #333;
+    font-size: 14px;
+    font-family: "Noto Sans KR";
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+.clearfix::after, .clearfix::before{content: ""; display: block; clear: both;}
+
+#wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    width: 375px;
+    height: 812px;
+    margin: 0 auto;  
+}
+#header h1{
+    text-align: center;
+    padding-top: 40px;
+}
+#header a{
+    position: absolute;
+    padding-right: 20px;
+    top: 85px;
+    right: 0;
+}
+#online h2{
+    padding: 10px 0;
+    color: #ffc629;
+    font-size: 25px;
+    background-color: red;
+}
+#online{
+    display: flex;
+    text-align: center;
+    padding: 20px;
+}
+.content{
+    flex: 1;
+    border: 1px #ffc629 solid;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 19px;   
+    }
+.content a{
+    color: #ffc629;
+}
+.content:last-of-type{
+    margin-right: 0;
+}
+#wrap h2{
+    padding-left: 20px;
+    color: #ffc629;
+    font-size: 25px;
+    font-weight: bold;
+}
+/* 모임  */
+#meeting div{
+    box-shadow: #ffc629 1px 1px 3px;
+    padding: 30px;
+    border-radius: 19px;
+    margin: 10px 20px;
+}
+#meeting div:last-of-type{
+    margin-top: 33px;
+}
+#meeting div:first-of-type{
+    animation: vibr 1s linear infinite;
+}
+
+@keyframes vibr {
+    0% {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+      }
+      20% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+      }
+      40% {
+        -webkit-transform: translate(-2px, -2px);
+                transform: translate(-2px, -2px);
+      }
+      60% {
+        -webkit-transform: translate(2px, 2px);
+                transform: translate(2px, 2px);
+      }
+      80% {
+        -webkit-transform: translate(2px, -2px);
+                transform: translate(2px, -2px);
+      }
+      100% {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+      }    
+}
+#meeting div img{
+    float: left;
+    padding-right: 20px;
+}
+#meeting div p{
+    line-height: 2;
+    font-size: 18px;
+}
+#meeting div span{
+    font-weight: bold;
+}
+#meeting a{
+    border:#ffc629 1px solid;
+    border-radius: 18px;
+    padding: 5px 15px;
+    float: right;
+    margin: 0 7px;
+}
+#meeting a.click{
+    animation: click 1.0s linear infinite;
+    
+    }
+@keyframes click {
+    0% {background: #fff;}
+    30% {background-color: #fff;}
+    50% {background-color: #fff;}
+    100% {background-color: #ffc629;}
+}
+
+/* footer  */
+#footer{
+    background: #F9F9F9;
+    box-sizing: border-box;
+    padding: 12px 0px;
+}
+#footer ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer ul li{
+    float: left;
+}

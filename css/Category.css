@@ -1,0 +1,126 @@
+@import url(reset.css);
+*{-webkit-text-size-adjust: none;}
+/* ⬆️ 모바일 웹킷 브라우저는 뷰포트가 변할때 텍스트 크기를 자동으로 조절한다. 
+텍스트 크기 조절 금지할때 사용  */
+body{
+    color: #333;
+    font-size: 14px;
+    font-family: "Noto Sans KR";
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+.clearfix::after, .clearfix::before{content: ""; display: block; clear: both;}
+
+#wrap{
+    position: relative;
+    width: 375px;
+    height: 812px;
+    margin: 0 auto;  
+}
+#wrap .prev img{
+    width: 12px;    
+}
+#header .prev{
+    position: absolute;
+    left: 20px;
+    top: 35px;
+    display: inline;
+}
+select{
+    position: relative;
+    font-family: "Noto Sans KR";
+    margin: 25px 0 3px 40px;
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    color: rgb(92, 92, 92);
+}
+.line{
+    border: #ffc629a1 2px solid;
+}
+#header{
+    position: relative;
+}
+#header > a{
+    position: absolute;
+    top: 40px;
+    right: 35px;
+}
+#content{
+    text-align: center;
+    padding: 10px 20px;
+}
+#content ul {
+    position: relative;
+}
+#content ul li{
+display: inline-block;
+box-sizing: border-box;
+padding:3px 8px 3px 0;
+text-align: center;
+}
+#content >ul >li> a> p{
+    font-size: 14px;
+}
+#content >ul >li.one{
+    animation: one 1.8s linear 0s;
+}
+@keyframes one {
+    0% {
+        -webkit-transform: translateY(-2000px) rotateX(-30deg) scale(0);
+                transform: translateY(-2000px) rotateX(-30deg) scale(0);
+        opacity: 0;
+      }
+    }
+    #content >ul >li.two{
+        animation: two 2s linear 0s;
+    }
+    @keyframes two {
+        0% {
+            -webkit-transform: translateY(-1900px) rotateX(-30deg) scale(0);
+                    transform: translateY(-1900px) rotateX(-30deg) scale(0);
+            opacity: 0;
+          }
+        }
+        #content >ul >li.thr{
+            animation: thr 2.5s linear 0s;
+        }
+        @keyframes thr {
+            0% {
+                -webkit-transform: translateY(-1700px) rotateX(-30deg) scale(0);
+                        transform: translateY(-1700px) rotateX(-30deg) scale(0);
+                opacity: 0;
+              }
+            }
+            #content >ul >li.for{
+                animation: for 3s linear 0s;
+            }
+            @keyframes for {
+                0% {
+                    -webkit-transform: translateY(-1500px) rotateX(-30deg) scale(0);
+                            transform: translateY(-1500px) rotateX(-30deg) scale(0);
+                    opacity: 0;
+                  }
+                }
+                #content >ul >li.five{
+                    animation: five 3.5s linear 0s;
+                }
+                @keyframes five {
+                    0% {
+                        -webkit-transform: translateY(-1300px) rotateX(-30deg) scale(0);
+                                transform: translateY(-1300px) rotateX(-30deg) scale(0);
+                        opacity: 0;
+                      }
+                    }
+                    #content >ul >li.six{
+                        animation: six 4s linear 0s;
+                    }
+                    @keyframes six {
+                        0% {
+                            -webkit-transform: translateY(-1100px) rotateX(-30deg) scale(0);
+                                    transform: translateY(-1100px) rotateX(-30deg) scale(0);
+                            opacity: 0;
+                          }
+                        }
